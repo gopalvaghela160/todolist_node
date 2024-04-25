@@ -9,7 +9,7 @@ exports.inserttask = async (req, res) => {
     req.body.start_date = startdate;
     req.body.end_date = enddate;
     req.body.total_day = totalday;
-
+    req.body.status = "Pending"
 
     const data = await task.create(req.body);
     res.status(200).json({

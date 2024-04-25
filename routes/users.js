@@ -5,9 +5,14 @@ var staff = require('../controller/staffcontroller');
 
 router.post('/',staff.insertstaff);
 router.post('/login',staff.login);
+router.get('/logout',staff.logout);
 router.get('/view',staff.view);
 router.get('/one/:id',staff.getone);
 router.put('/update_user/:id',staff.updatestaff);
 router.delete('/delete_user/:id',staff.deletestaff);
+router.get('/staffview_task',staff.viewtaskstaff);
+router.get('/accept/:id',staff.accept);
+router.get('/decline/:id',staff.decline);
+router.get('/complated/:id',staff.complated);
 
 module.exports = router;
